@@ -1,0 +1,33 @@
+{
+  "name": "comanimate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "rollup -m -c build/rollup.config.dev.js --watch",
+    "build": "rollup -m -c build/rollup.config.build.js",
+    "release": "rollup -c build/rollup.config.release.js"
+  },
+  "keywords": [
+    "animate"
+  ],
+  "devDependencies": {
+    "@babel/core": "^7.2.0",
+    "@babel/polyfill": "^7.0.0",
+    "@babel/preset-env": "^7.2.0",
+    "babel-eslint": "^10.0.2",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-prettier": "^3.0.1",
+    "rollup": "^1.8.0",
+    "rollup-plugin-babel": "^4.3.2",
+    "rollup-plugin-commonjs": "^9.3.0",
+    "rollup-plugin-json": "^4.0.0",
+    "rollup-plugin-node-resolve": "^4.0.1",
+    "rollup-plugin-terser": "^4.0.4",
+    "rollup-plugin-uglify": "^6.0.2"
+  },
+  "author": "emloxe",
+  "license": "MIT"
+}

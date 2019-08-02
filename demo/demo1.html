@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>comAnimate demo1</title>
+</head>
+<body>
+
+<script type="text/javascript">
+  new Animate({
+    from: [0, 'red'],
+    to: [1, 'green'],
+    delay: 1000,
+    dur: 1000,
+    easing: 'easeNone',
+    onUpdate: function (value) {
+      console.log(value[0], value[1]);
+    }
+  }).start();
+</script>
+</body>
+</html>
