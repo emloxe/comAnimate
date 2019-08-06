@@ -1,6 +1,6 @@
 export default `/**
  *
- * kuno - https://github.com/emloxe/rollup-template
+ * comAnimate - https://github.com/emloxe/comAnimate
  *
  * Copyright 2019 emloxe Contributors
  *
