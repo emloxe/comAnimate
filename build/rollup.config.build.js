@@ -1,4 +1,5 @@
 import json from 'rollup-plugin-json';
+import babel from 'rollup-plugin-babel';
 import copyright from '../src/copyrightHeader';
 
 export default {
@@ -13,5 +14,10 @@ export default {
     },
     banner: copyright,
   },
-  plugins: [json()],
+  plugins: [
+    babel({
+      exclude: 'node_modules/**',
+    }),
+    json(),
+  ],
 };
