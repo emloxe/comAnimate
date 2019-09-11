@@ -1,5 +1,8 @@
 import json from 'rollup-plugin-json';
-import copyright from '../src/copyrightHeader';
+import commonjs from 'rollup-plugin-commonjs';
+import babel from 'rollup-plugin-babel';
+import resolve from 'rollup-plugin-node-resolve';
+import copyright from './copyrightHeader';
 
 export default {
   input: 'src/index.js',
@@ -17,5 +20,13 @@ export default {
     include: 'src/**',
     exclude: 'node_modules/**',
   },
-  plugins: [json()],
+  plugins: [
+    resolve(),
+    babel({
+      exclude: 'node_modules/**',
+      runtimeHelpers: true,
+    }),
+    commonjs(),
+    json()
+  ],
 };

@@ -1,10 +1,9 @@
 import json from 'rollup-plugin-json';
-
 import babel from 'rollup-plugin-babel';
 import resolve from 'rollup-plugin-node-resolve';
 import commonjs from 'rollup-plugin-commonjs';
 import { terser } from 'rollup-plugin-terser';
-import copyright from '../src/copyrightHeader';
+import copyright from './copyrightHeader';
 
 export default {
   input: 'src/index.js',
@@ -20,13 +19,13 @@ export default {
     },
   ],
   plugins: [
-    json(),
     resolve(),
-    commonjs(),
     babel({
       exclude: 'node_modules/**',
-      presets: [['@babel/preset-env']],
+      runtimeHelpers: true,
     }),
+    commonjs(),
     terser(),
+    json(),
   ],
 };
